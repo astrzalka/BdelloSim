@@ -20,15 +20,16 @@
 ##
 golem::fill_desc(
   pkg_name = "BdelloSim", # The Name of the package containing the App
-  pkg_title = "PKG_TITLE", # The Title of the package containing the App
-  pkg_description = "PKG_DESC.", # The Description of the package containing the App
-  author_first_name = "AUTHOR_FIRST", # Your First Name
-  author_last_name = "AUTHOR_LAST", # Your Last Name
-  author_email = "AUTHOR@MAIL.COM", # Your Email
+  pkg_title = "Bdellovibrio bacteriovorus growth simulation app", # The Title of the package containing the App
+  pkg_description = "Shiny application simulating growth of Bdellovibrio bacteriovorus depending on progeny number and life cycle length.", # The Description of the package containing the App
+  author_first_name = "Agnieszka", # Your First Name
+  author_last_name = "Strzalka", # Your Last Name
+  author_email = "agnieszka.strzalka@uwr.edu.pl", # Your Email
   repo_url = NULL # The URL of the GitHub Repo (optional)
 )
 
 ## Set {golem} options ----
+golem::set_golem_version('0.1')
 golem::set_golem_options()
 
 ## Create Common Files ----
