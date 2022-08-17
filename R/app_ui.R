@@ -8,11 +8,11 @@
 #' @noRd
 app_ui <- fluidPage(
 
-  titlePanel("Bdellovibrio bacteriovorus"),
+  titlePanel("BdelloSim"),
   fluidRow(
     column(8,
-           h6('       Binary or non-binary fission? Reproductive mode of predatory bacterium depends on a prey size.'),
-           h6('       Karolina Pląskowska, Łukasz Makowski, Agnieszka Strzałka, Jolanta Zakrzewska-Czerwińska')
+           h6('Binary or non-binary fission? Reproductive mode of predatory bacterium depends on a prey size.'),
+           h6('Karolina Pląskowska, Łukasz Makowski, Agnieszka Strzałka, Jolanta Zakrzewska-Czerwińska')
     )
   ),
   #  sidebarLayout(
