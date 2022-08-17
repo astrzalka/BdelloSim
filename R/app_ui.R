@@ -7,6 +7,7 @@
 #' @import magrittr
 #' @noRd
 app_ui <- fluidPage(
+  theme = shinythemes::shinytheme("united"),
 
   titlePanel("BdelloSim"),
   fluidRow(
