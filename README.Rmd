@@ -24,7 +24,12 @@ We assume that always all *B. bacteriovorus* find a host (if enough host cells a
 
 You can install the development version of BdelloSim like so:
 
-```{r}
+``` r
 devtools::install_github('astrzalka/BdelloSim')
 ```
 
+
+Please cite:
+
+Binary or non-binary fission? Reproductive mode of predatory bacterium depends on a prey size 
+Karolina Pląskowska, Łukasz Makowski, Agnieszka Strzałka, Jolanta Zakrzewska-Czerwińska

@@ -25,8 +25,10 @@ app_ui <- fluidPage(
            textInput('host_name_1', 'Host name', value = 'Escherichia coli'),
            sliderInput('host_start_1', 'Input starting number of host cells', value = 100000, min = 100, max = 10000000, step = 100),
            sliderInput('bdello_start_1', 'Input starting number of Bdellivibrio cells', value = 10, min = 1, max = 1000, step = 1),
-           numericInput('n_progeny_1', 'Average number of progeny cells', value = 4, step = 1),
+           numericInput('n_progeny_1', 'Average number of progeny cells', value = 4, step = 1, min = 2),
            numericInput('time_progeny_1', 'Bdellovibrio life cycle length [min]', value = 290, step = 10),
+           h4(strong('Time required for host complete lysis:')),
+           textOutput('res_host_1')
 
     ),
     column(2,
@@ -35,8 +37,10 @@ app_ui <- fluidPage(
                             textInput('host_name_2', 'Host name', value = 'Proteus mirabilis'),
                             sliderInput('host_start_2', 'Input starting number of host cells', value = 100000, min = 100, max = 10000000, step = 100),
                             sliderInput('bdello_start_2', 'Input starting number of Bdellivibrio cells', value = 10, min = 1, max = 1000, step = 1),
-                            numericInput('n_progeny_2', 'Average number of progeny cells', value = 2, step = 1),
-                            numericInput('time_progeny_2', 'Bdellovibrio life cycle length [min]', value = 250, step = 10)
+                            numericInput('n_progeny_2', 'Average number of progeny cells', value = 2, step = 1, min = 2),
+                            numericInput('time_progeny_2', 'Bdellovibrio life cycle length [min]', value = 250, step = 10),
+                            h4(strong('Time required for host complete lysis:')),
+                            textOutput('res_host_2')
            )
 
     ),
@@ -46,8 +50,10 @@ app_ui <- fluidPage(
                             textInput('host_name_3', 'Host name', value = 'Shigella flexneri'),
                             sliderInput('host_start_3', 'Input starting number of host cells', value = 100000, min = 100, max = 10000000, step = 100),
                             sliderInput('bdello_start_3', 'Input starting number of Bdellivibrio cells', value = 10, min = 1, max = 1000, step = 1),
-                            numericInput('n_progeny_3', 'Average number of progeny cells', value = 6, step = 1),
-                            numericInput('time_progeny_3', 'Bdellovibrio life cycle length [min]', value = 380, step = 10)
+                            numericInput('n_progeny_3', 'Average number of progeny cells', value = 6, step = 1, min = 2),
+                            numericInput('time_progeny_3', 'Bdellovibrio life cycle length [min]', value = 380, step = 10),
+                            h4(strong('Time required for host complete lysis:')),
+                            textOutput('res_host_3')
            )
 
     ),

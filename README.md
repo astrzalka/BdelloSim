@@ -21,6 +21,8 @@ You can install the development version of BdelloSim like so:
 devtools::install_github('astrzalka/BdelloSim')
 ```
 
-Please cite: Binary or non-binary fission? Reproductive mode of
-predatory bacterium depends on a prey size Karolina Pląskowska, Łukasz
-Makowski, Agnieszka Strzałka, Jolanta Zakrzewska-Czerwińska
+Please cite:
+
+Binary or non-binary fission? Reproductive mode of predatory bacterium
+depends on a prey size Karolina Pląskowska, Łukasz Makowski, Agnieszka
+Strzałka, Jolanta Zakrzewska-Czerwińska
