@@ -72,7 +72,7 @@ oblicz_czas_bdello <- function(n_gosp, n_bdello, n_potomnych, czas_bdello, plot 
       ggplot2::geom_line(aes(x = czas, y = n_bdello), color = 'red')+
       ggplot2::theme_minimal()
 
-    print(p)
+    # print(p)
   }
 
   return(wyniki)
@@ -137,7 +137,7 @@ oblicz_czas_bdello_wiele <- function(data_bdello, plot = TRUE){
       ggplot2::theme(legend.position='bottom')
 
     # wyświetla wykres
-    print(p)
+    # print(p)
 
   }
 
@@ -219,7 +219,7 @@ ile_bdello <- function(n_gosp_o = 1000, n_potomnych_o = 4, czas_bdello_o = 240, 
                  n_gosp = n_gosp_o, n_potomnych = n_potomnych_o, czas_bdello = czas_bdello_o, czas_maks = czas_maks_o)
 
   wynik <- round(wynik$par)
-  print('Początkowa liczba komórek Bdellovibrio')
+  # print('Początkowa liczba komórek Bdellovibrio')
   # sprawdz czy wynik jest ok, jak za mały to dodaj 1
   if(bdello_optim(n_bdello = wynik, n_gosp = n_gosp_o, n_potomnych = n_potomnych_o,
                   czas_bdello = czas_bdello_o, czas_maks = czas_maks_o) == 1000000000){
