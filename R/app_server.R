@@ -8,13 +8,13 @@ app_server <- function(input, output, session) {
   bdello_data <- reactive({
 
     data <- data.frame(gosp = input$host_name_1,
-                       n_gosp_start = input$host_start_1,
+                       n_gosp_start = input$host_start_1 * 1000000,
                        n_bdello_start = input$bdello_start_1,
                        n_potomnych = input$n_progeny_1,
                        czas_bdello = input$time_progeny_1)
     if(input$host_2){
       data2 <- data.frame(gosp = input$host_name_2,
-                          n_gosp_start = input$host_start_2,
+                          n_gosp_start = input$host_start_2 * 1000000,
                           n_bdello_start = input$bdello_start_2,
                           n_potomnych = input$n_progeny_2,
                           czas_bdello = input$time_progeny_2)
@@ -25,7 +25,7 @@ app_server <- function(input, output, session) {
 
     if(input$host_3){
       data3 <- data.frame(gosp = input$host_name_3,
-                          n_gosp_start = input$host_start_3,
+                          n_gosp_start = input$host_start_3 * 1000000,
                           n_bdello_start = input$bdello_start_3,
                           n_potomnych = input$n_progeny_3,
                           czas_bdello = input$time_progeny_3)
