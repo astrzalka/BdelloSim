@@ -97,7 +97,7 @@ oblicz_czas_bdello_wiele <- function(data_bdello, plot = TRUE){
   # pętla dla każdego gospodarza osobno
   for(i in 1:nrow(data_bdello)){
     # wypisuje nazwę gospodarza
-    print(data_bdello$gosp[i])
+    # print(data_bdello$gosp[i])
     # oblicza wynik dla gospodarza
     wynik <- oblicz_czas_bdello(n_gosp = data_bdello$n_gosp_start[i],
                                 n_bdello = data_bdello$n_bdello_start[i],

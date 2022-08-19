@@ -68,17 +68,23 @@ app_server <- function(input, output, session) {
 
   time_host_2 <- reactive({
 
-    data <- bdello_plot()[[2]]
+    if(input$host_2){
 
-    data %>% dplyr::filter(host == input$host_name_2) %>% dplyr::slice_tail(n=1) %>%
-      dplyr::pull(time) %>% paste0(' min') -> time_1
+      data <- bdello_plot()[[2]]
 
-    return(time_1)
+      data %>% dplyr::filter(host == input$host_name_2) %>% dplyr::slice_tail(n=1) %>%
+        dplyr::pull(time) %>% paste0(' min') -> time_1
+
+      return(time_1)
+    } else {
+      return(NULL)
+    }
   })
 
   output$res_host_2 <- renderText(time_host_2())
 
   time_host_3 <- reactive({
+    if(input$host_3){
 
     data <- bdello_plot()[[2]]
 
@@ -86,6 +92,9 @@ app_server <- function(input, output, session) {
       dplyr::pull(time) %>% paste0(' min') -> time_1
 
     return(time_1)
+    } else {
+      return(NULL)
+    }
   })
 
   output$res_host_3 <- renderText(time_host_3())
