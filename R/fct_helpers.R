@@ -120,10 +120,10 @@ oblicz_czas_bdello_wiele <- function(data_bdello, plot = TRUE){
     p1 <- ggplot2::ggplot(wyniki_table, ggplot2::aes(x = czas, y = n_gosp, color = gospodarz))+
       ggplot2::geom_line()+
       ggplot2::theme_minimal()+
-      ggplot2::ggtitle('Host cell number')+
-      ggplot2::ylab('n host cells')+
+      ggplot2::ggtitle('Prey cell number')+
+      ggplot2::ylab('n prey cells')+
       ggplot2::xlab('Time [min]')+
-      ggplot2::scale_color_brewer(palette = 'Set1', name = 'Host')
+      ggplot2::scale_color_brewer(palette = 'Set1', name = 'Prey')
 
     p2 <- ggplot2::ggplot(wyniki_table, ggplot2::aes(x = czas, y = n_bdello, color = gospodarz))+
       ggplot2::geom_line()+
@@ -131,7 +131,7 @@ oblicz_czas_bdello_wiele <- function(data_bdello, plot = TRUE){
       ggplot2::ggtitle('Bdellovibrio cell number')+
       ggplot2::ylab('n Bdellovibrio cells')+
       ggplot2::xlab('Time [min]')+
-      ggplot2::scale_color_brewer(palette = 'Set1', name = 'Host')
+      ggplot2::scale_color_brewer(palette = 'Set1', name = 'Prey')
     # wykresy obok siebie, legenda z boku, usuwa duplikaty legendy
     p <- p1 + p2 + plot_layout(guides = 'collect') &
       ggplot2::theme(legend.position='bottom')

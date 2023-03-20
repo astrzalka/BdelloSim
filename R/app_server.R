@@ -44,7 +44,7 @@ app_server <- function(input, output, session) {
 
     wynik <- oblicz_czas_bdello_wiele(data_bdello = data)
 
-    colnames(wynik[[2]]) <- c('n host', 'n bdellovibrio', 'time', 'host')
+    colnames(wynik[[2]]) <- c('n prey', 'n bdellovibrio', 'time', 'prey')
 
     return(wynik)
 
@@ -58,7 +58,7 @@ app_server <- function(input, output, session) {
 
     data <- bdello_plot()[[2]]
 
-    data %>% dplyr::filter(host == input$host_name_1) %>% dplyr::slice_tail(n=1) %>%
+    data %>% dplyr::filter(prey == input$host_name_1) %>% dplyr::slice_tail(n=1) %>%
       dplyr::pull(time) %>% paste0(' min') -> time_1
 
     return(time_1)
@@ -72,7 +72,7 @@ app_server <- function(input, output, session) {
 
       data <- bdello_plot()[[2]]
 
-      data %>% dplyr::filter(host == input$host_name_2) %>% dplyr::slice_tail(n=1) %>%
+      data %>% dplyr::filter(prey == input$host_name_2) %>% dplyr::slice_tail(n=1) %>%
         dplyr::pull(time) %>% paste0(' min') -> time_1
 
       return(time_1)
@@ -88,7 +88,7 @@ app_server <- function(input, output, session) {
 
     data <- bdello_plot()[[2]]
 
-    data %>% dplyr::filter(host == input$host_name_3) %>% dplyr::slice_tail(n=1) %>%
+    data %>% dplyr::filter(prey == input$host_name_3) %>% dplyr::slice_tail(n=1) %>%
       dplyr::pull(time) %>% paste0(' min') -> time_1
 
     return(time_1)
